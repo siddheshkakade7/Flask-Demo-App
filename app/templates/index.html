@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Flask Demo App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Flask Demo App</h1>
+    <p>Type text below and choose whether to uppercase it. Submit to see the result.</p>
+
+    <form id="text-form">
+      <label for="text">Text</label>
+      <textarea id="text" name="text" rows="4" placeholder="Enter text..."></textarea>
+
+      <div class="checkbox">
+        <input type="checkbox" id="to_upper" name="to_upper">
+        <label for="to_upper">Convert to UPPERCASE</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Result</h2>
+    <pre id="result">{ "output": "" }</pre>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
